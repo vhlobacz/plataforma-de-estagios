@@ -1,38 +1,7 @@
 <div class="container-fluid pt-3">
-    <div class="row justify-content-center" style="max-width: 800px; margin: 0 auto;">
-      <div *ngFor="let vaga of vagas" class="col-12 mb-3">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <div class="row">
-              <div class="col-12">
-                <h6 class="text-uppercase mb-2">{{ vaga.titulo }}</h6>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col-6">
-                <i class="fa fa-money me-1" aria-hidden="true"></i>{{ vaga.salario }}
-              </div>
-              <div class="col-6">
-                <i class="fa fa-building me-1" aria-hidden="true"></i>{{ vaga.empresa }}
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col-12">
-                <i class="fa fa-file-text-o me-1" aria-hidden="true"></i>
-                <span class="text-muted">{{ vaga.desc }}</span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-6">
-                <small class="text-muted">2 dias atrás</small>
-              </div>
-              <div class="col-6 text-end">
-                <i class="fa fa-bookmark" aria-hidden="true"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <div class="row justify-content-center" style="max-width: 800px; margin: 0 auto;">
+    <div *ngFor="let vaga of vagas" class="col-12 mb-3">
+      <app-job-info [vaga]="vaga"></app-job-info>
     </div>
   </div>
-  
+</div>

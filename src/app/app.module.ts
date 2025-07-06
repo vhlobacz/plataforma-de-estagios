@@ -9,6 +9,7 @@ import { RegistrationComponent } from './pages/registration/registration.compone
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { JobInfoComponent } from './pages/job-info/job-info.component';
 
 
 
@@ -18,7 +19,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HomeComponent,
     JobsComponent,
     LoginComponent,
-    RegistrationComponent
+    RegistrationComponent,
+    JobInfoComponent
   ],
   imports: [
     BrowserModule,
