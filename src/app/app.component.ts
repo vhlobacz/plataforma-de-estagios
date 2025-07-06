@@ -19,17 +19,6 @@ export class AppComponent {
     }
   }
 
-  // ngOnInit() {
-  //   const userData = localStorage.getItem('jobLoginUser');
-  //   if(userData == null) {
-  //     this.isLoggedIn = false;
-  //   } else {
-  //     this.isLoggedIn = true;
-  //     this.userInfo = JSON.parse(userData)
-  //     // console.log(this.userInfo);
-  //   }
-  // }
-
   logoff() {
     localStorage.removeItem('jobLoginUser');
     this.isLoggedIn = false;

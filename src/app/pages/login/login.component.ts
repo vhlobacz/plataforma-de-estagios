@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { JobService } from 'src/app/service/job.service';
-// import { Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +8,7 @@ import { JobService } from 'src/app/service/job.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  // @Output() loginUpdate = new EventEmitter <any> ()
+
   loginObj: any = {
     "UserName": "",
     "Password": ""

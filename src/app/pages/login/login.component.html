@@ -1,33 +1,11 @@
 <div class="parent">
     <div class="container" id="container">
-        <!--div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
-            </form>
-        </div-->
         <div class="form-container sign-in-container">
             <form action="#">
-                <h1>Sign in</h1>
-                <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
-                <input type="email" [(ngModel)]="loginObj.UserName" name="UserName" placeholder="Email" />
-                <input type="password" [(ngModel)]="loginObj.Password" name="Password" placeholder="Password" />
-                <a href="#">Forgot your password?</a>
-                <button (click)="onLogin()">Sign In</button>
+                <h1>Entrar</h1>
+                <input type="email" [(ngModel)]="loginObj.UserName" name="UserName" placeholder="Usuário" />
+                <input type="password" [(ngModel)]="loginObj.Password" name="Password" placeholder="Senha" />
+                <button (click)="onLogin()">Entrar</button>
             </form>
         </div>
         <div class="overlay-container">
@@ -38,13 +16,10 @@
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
+                    <h1>Ainda não tem uma conta?</h1>
+                    <p>Cadastre-se agora mesmo</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-

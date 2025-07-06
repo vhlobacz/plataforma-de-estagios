@@ -1,26 +1,26 @@
-<section class="h-100 h-custom">
+<!-- <section class="h-100 h-custom">
     <div class="container py-1 h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <div class="col-lg-8 col-xl-6">
                 <div class="card rounded-3">
                     <div class="card-body p-4 p-md-5">
-                        <h3 class="mb-1 pb-2 pb-md-0 px-md-2 text-center">Registration</h3>
+                        <h3 class="mb-1 pb-2 pb-md-0 px-md-2 text-center">Cadastro</h3>
                         <form novalidate="" class="px-md-2 ng-untouched ng-pristine ng-valid">
                             <div class="row pb-2">
                                 <div class="col-12 text-center">
                                     <div class="btn-group">
-                                        <button type="button" (click)="isJobSeeker = true" class="btn" [ngClass]="isJobSeeker? 'btn-success':'btn-primary'">Are you a Job Seeker</button>
-                                        <button type="button" (click)="isJobSeeker = false" class="btn" [ngClass]="!isJobSeeker? 'btn-success':'btn-primary'">Register As An Employer</button></div>
+                                        <button type="button" (click)="isJobSeeker = true" class="btn" [ngClass]="isJobSeeker? 'btn-success':'btn-primary'">Estudante</button>
+                                        <button type="button" (click)="isJobSeeker = false" class="btn" [ngClass]="!isJobSeeker? 'btn-success':'btn-primary'">Empresa</button></div>
                                 </div>
                             </div>
 
-                            <!-- B U S C A N D O   V A G A -->                            
+                             B U S C A N D O   V A G A                            
                             <div>
                                 <div *ngIf="isJobSeeker">
                                     <div class="form-outline mb-1">
                                         <input type="text" [(ngModel)]="jobSeekerObj.FullName" name="FullName"
                                             class="form-control ng-untouched ng-pristine ng-valid" />
-                                        <label for="form3Example1q" class="form-label">Full Name</label>
+                                        <label for="form3Example1q" class="form-label">Nome Completo</label>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4 mb-1">
@@ -34,36 +34,36 @@
                                             <div class="form-outline datepicker"><input type="text" name="MobileNo"
                                                     [(ngModel)]="jobSeekerObj.MobileNo"
                                                     class="form-control ng-untouched ng-pristine ng-valid" /><label
-                                                    for="exampleDatepicker1" class="form-label">Mobile</label></div>
+                                                    for="exampleDatepicker1" class="form-label">Telefone</label></div>
                                         </div>
                                         <div class="col-md-4 mb-1">
                                             <div class="form-outline datepicker">
                                                 <select name="ExperienceStatus" class="form-control" [(ngModel)]="jobSeekerObj.ExperienceStatus">
-                                                    <option value="" selected disabled>Select Status</option>
-                                                    <option value="Fresher">Fresher</option>
-                                                    <option value="Experienced">Experienced</option>
+                                                    <option value="" selected disabled>Selecione</option>
+                                                    <option value="Fresher">Nunca estagiei</option>
+                                                    <option value="Experienced">Tenho experiência</option>
                                                 </select>
-                                                <label for="form3Example1q" class="form-label">Experience</label>
+                                                <label for="form3Example1q" class="form-label">Experiência</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-outline mb-1">
                                         <input type="text" [(ngModel)]="jobSeekerObj.ResumeUrl" name="ResumeUrl"
                                             class="form-control ng-untouched ng-pristine ng-valid" />
-                                        <label for="form3Example1q" class="form-label">Resume Url</label>
+                                        <label for="form3Example1q" class="form-label">Link do Portifólio</label>
                                     </div>
                                     <div class="row">
                                         <div class="col-12 text-center">
-                                            <button (click)="registerJobSeeker()" class="btn btn-success btn-lg mb-1">Register</button></div>
+                                            <button (click)="registerJobSeeker()" class="btn btn-success btn-lg mb-1">Cadastrar-se</button></div>
                                     </div>
                                 </div>
 
-                                <!-- E M P R E S A  -->
+                                E M P R E S A
                                 <div *ngIf="!isJobSeeker">
                                     <div class="form-outline mb-1">
                                         <input type="text" [(ngModel)]="employerObj.CompanyName" name="CompanyName"
                                             class="form-control ng-untouched ng-pristine ng-valid" />
-                                        <label for="form3Example1q" class="form-label">Company Name</label>
+                                        <label for="form3Example1q" class="form-label">Nome da Empresa</label>
                                     </div>
                                     <div class="row">
                                         <div class="col-md-4 mb-1">
@@ -77,54 +77,277 @@
                                             <div class="form-outline datepicker"><input type="text" name="MobileNo"
                                                     [(ngModel)]="employerObj.MobileNo"
                                                     class="form-control ng-untouched ng-pristine ng-valid" /><label
-                                                    for="exampleDatepicker1" class="form-label">Mobile</label></div>
+                                                    for="exampleDatepicker1" class="form-label">Telefone 1</label></div>
                                         </div>
                                         <div class="col-md-4 mb-1">
                                             <div class="form-outline datepicker"><input type="text" name="PhoneNo" [(ngModel)]="employerObj.PhoneNo"
                                                     class="form-control ng-untouched ng-pristine ng-valid" /><label
-                                                    for="exampleDatepicker1" class="form-label">Phone</label></div>
+                                                    for="exampleDatepicker1" class="form-label">Telefone 2</label></div>
                                         </div>
                                     </div>
                                     <div class="row mb-1 pb-2 pb-md-0">
                                         <div class="col-md-6">
                                             <div class="form-outline"><input type="text" name="LogoURL" [(ngModel)]="employerObj.LogoURL"
                                                     class="form-control ng-untouched ng-pristine ng-valid" /><label
-                                                    for="form3Example1w" class="form-label">Company Logo Url</label></div>
+                                                    for="form3Example1w" class="form-label">Logo da Empresa</label></div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-outline"><input type="text" name="GstNo" [(ngModel)]="employerObj.GstNo"
                                                     class="form-control ng-untouched ng-pristine ng-valid" /><label
-                                                    for="form3Example1w" class="form-label">GST No</label></div>
+                                                    for="form3Example1w" class="form-label">CNPJ</label></div>
                                         </div>
                                     </div>
                                     <div class="row mb-1 pb-2 pb-md-0">
                                         <div class="col-md-4">
                                             <div class="form-outline"><input type="text" name="City" [(ngModel)]="employerObj.City"
                                                     class="form-control ng-untouched ng-pristine ng-valid" /><label
-                                                    for="form3Example1w" class="form-label">City</label></div>
+                                                    for="form3Example1w" class="form-label">Cidade</label></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-outline"><input type="text" name="State" [(ngModel)]="employerObj.State"
                                                     class="form-control ng-untouched ng-pristine ng-valid" /><label
-                                                    for="form3Example1w" class="form-label">State</label></div>
+                                                    for="form3Example1w" class="form-label">Estado</label></div>
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-outline"><input type="text" name="PinCode" [(ngModel)]="employerObj.PinCode"
                                                     class="form-control ng-untouched ng-pristine ng-valid" /><label
-                                                    for="form3Example1w" class="form-label">Pin-Code</label></div>
+                                                    for="form3Example1w" class="form-label">Código Pin</label></div>
                                         </div>
                                     </div>
                                     <div class="form-outline mb-1"><textarea name="CompanyAddress" [(ngModel)]="employerObj.CompanyAddress" rows="3"
                                             class="form-control ng-untouched ng-pristine ng-valid"></textarea><label
-                                            for="form3Example1q" class="form-label">Address</label></div>
+                                            for="form3Example1q" class="form-label">Endereço</label></div>
                                     <div class="row">
                                         <div class="col-12 text-center">
-                                            <button (click)="register()" class="btn btn-success btn-lg mb-1">Register</button></div>
+                                            <button (click)="register()" class="btn btn-success btn-lg mb-1">Cadastrar-se</button></div>
                                     </div>
                                 </div>
 
                             </div>
-                            <!---->
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="h-100 h-custom">
+    <div class="container py-1 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-1 pb-2 pb-md-0 px-md-2 text-center">Cadastro</h3>
+                        <form novalidate class="px-md-2">
+                            <div class="row pb-2">
+                                <div class="col-12 text-center">
+                                    <div class="btn-group">
+                                        <button type="button" (click)="isJobSeeker = true" class="btn"
+                                            [ngClass]="isJobSeeker? 'btn-success':'btn-primary'">Estudante</button>
+                                        <button type="button" (click)="isJobSeeker = false" class="btn"
+                                            [ngClass]="!isJobSeeker? 'btn-success':'btn-primary'">Empresa</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div *ngIf="isJobSeeker" [formGroup]="jobSeekerForm">
+                                <div class="form-outline mb-1">
+                                    <input type="text" formControlName="FullName" class="form-control" />
+                                    <label for="form3Example1q" class="form-label">Nome Completo</label>
+                                    <div *ngIf="jobSeekerForm.controls['FullName'].invalid && jobSeekerForm.controls['FullName'].touched"
+                                        class="text-danger">
+                                        <div *ngIf="jobSeekerForm.controls['FullName'].errors?.['required']">Nome
+                                            Completo é obrigatório.</div>
+                                        <div *ngIf="jobSeekerForm.controls['FullName'].errors?.['minlength']">Nome
+                                            Completo deve ter no mínimo 3 caracteres.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 mb-1">
+                                        <div class="form-outline datepicker">
+                                            <input type="email" formControlName="EmailId" class="form-control" />
+                                            <label for="exampleDatepicker1" class="form-label">Email</label>
+                                            <div *ngIf="jobSeekerForm.controls['EmailId'].invalid && jobSeekerForm.controls['EmailId'].touched"
+                                                class="text-danger">
+                                                <div *ngIf="jobSeekerForm.controls['EmailId'].errors?.['required']">
+                                                    Email é obrigatório.</div>
+                                                <div *ngIf="jobSeekerForm.controls['EmailId'].errors?.['email']">Email
+                                                    inválido.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-1">
+                                        <div class="form-outline datepicker">
+                                            <input type="text" formControlName="MobileNo" class="form-control" />
+                                            <label for="exampleDatepicker1" class="form-label">Telefone</label>
+                                            <div *ngIf="jobSeekerForm.controls['MobileNo'].invalid && jobSeekerForm.controls['MobileNo'].touched"
+                                                class="text-danger">
+                                                <div *ngIf="jobSeekerForm.controls['MobileNo'].errors?.['required']">
+                                                    Telefone é obrigatório.</div>
+                                                <div *ngIf="jobSeekerForm.controls['MobileNo'].errors?.['pattern']">
+                                                    Telefone deve conter 10 dígitos numéricos.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-1">
+                                        <div class="form-outline datepicker">
+                                            <select formControlName="ExperienceStatus" class="form-control">
+                                                <option value="" selected disabled>Selecione</option>
+                                                <option value="Fresher">Nunca estagiei</option>
+                                                <option value="Experienced">Tenho experiência</option>
+                                            </select>
+                                            <label for="form3Example1q" class="form-label">Experiência</label>
+                                            <div *ngIf="jobSeekerForm.controls['ExperienceStatus'].invalid && jobSeekerForm.controls['ExperienceStatus'].touched"
+                                                class="text-danger">
+                                                <div
+                                                    *ngIf="jobSeekerForm.controls['ExperienceStatus'].errors?.['required']">
+                                                    Status de experiência é obrigatório.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-outline mb-1">
+                                    <input type="text" formControlName="ResumeUrl" class="form-control" />
+                                    <label for="form3Example1q" class="form-label">Link do Portifólio</label>
+                                    <div *ngIf="jobSeekerForm.controls['ResumeUrl'].invalid && jobSeekerForm.controls['ResumeUrl'].touched"
+                                        class="text-danger">
+                                        <div *ngIf="jobSeekerForm.controls['ResumeUrl'].errors?.['required']">Link do
+                                            Portfólio é obrigatório.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <button (click)="registerJobSeeker()" class="btn btn-success btn-lg mb-1"
+                                            [disabled]="jobSeekerForm.invalid">Cadastrar-se</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div *ngIf="!isJobSeeker" [formGroup]="employerForm">
+                                <div class="form-outline mb-1">
+                                    <input type="text" formControlName="CompanyName" class="form-control" />
+                                    <label for="form3Example1q" class="form-label">Nome da Empresa</label>
+                                    <div *ngIf="employerForm.controls['CompanyName'].invalid && employerForm.controls['CompanyName'].touched"
+                                        class="text-danger">
+                                        <div *ngIf="employerForm.controls['CompanyName'].errors?.['required']">Nome da
+                                            Empresa é obrigatório.</div>
+                                        <div *ngIf="employerForm.controls['CompanyName'].errors?.['minlength']">Nome da
+                                            Empresa deve ter no mínimo 3 caracteres.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 mb-1">
+                                        <div class="form-outline datepicker">
+                                            <input type="email" formControlName="EmailId" class="form-control" />
+                                            <label for="exampleDatepicker1" class="form-label">Email</label>
+                                            <div *ngIf="employerForm.controls['EmailId'].invalid && employerForm.controls['EmailId'].touched"
+                                                class="text-danger">
+                                                <div *ngIf="employerForm.controls['EmailId'].errors?.['required']">Email
+                                                    é obrigatório.</div>
+                                                <div *ngIf="employerForm.controls['EmailId'].errors?.['email']">Email
+                                                    inválido.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-1">
+                                        <div class="form-outline datepicker">
+                                            <input type="text" formControlName="MobileNo" class="form-control" />
+                                            <label for="exampleDatepicker1" class="form-label">Telefone 1</label>
+                                            <div *ngIf="employerForm.controls['MobileNo'].invalid && employerForm.controls['MobileNo'].touched"
+                                                class="text-danger">
+                                                <div *ngIf="employerForm.controls['MobileNo'].errors?.['required']">
+                                                    Telefone 1 é obrigatório.</div>
+                                                <div *ngIf="employerForm.controls['MobileNo'].errors?.['pattern']">
+                                                    Telefone 1 deve conter 10 dígitos numéricos.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-1">
+                                        <div class="form-outline datepicker">
+                                            <input type="text" formControlName="PhoneNo" class="form-control" />
+                                            <label for="exampleDatepicker1" class="form-label">Telefone 2</label>
+                                            <div *ngIf="employerForm.controls['PhoneNo'].invalid && employerForm.controls['PhoneNo'].touched"
+                                                class="text-danger">
+                                                <div *ngIf="employerForm.controls['PhoneNo'].errors?.['pattern']">
+                                                    Telefone 2 deve conter entre 10 e 15 dígitos numéricos.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-1 pb-2 pb-md-0">
+                                    <div class="col-md-6">
+                                        <div class="form-outline">
+                                            <input type="text" formControlName="LogoURL" class="form-control" />
+                                            <label for="form3Example1w" class="form-label">Logo da Empresa</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-outline">
+                                            <input type="text" formControlName="GstNo" class="form-control" />
+                                            <label for="form3Example1w" class="form-label">CNPJ</label>
+                                            <div *ngIf="employerForm.controls['GstNo'].invalid && employerForm.controls['GstNo'].touched"
+                                                class="text-danger">
+                                                <div *ngIf="employerForm.controls['GstNo'].errors?.['pattern']">CNPJ
+                                                    deve conter 15 caracteres alfanuméricos.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-1 pb-2 pb-md-0">
+                                    <div class="col-md-4">
+                                        <div class="form-outline">
+                                            <input type="text" formControlName="City" class="form-control" />
+                                            <label for="form3Example1w" class="form-label">Cidade</label>
+                                            <div *ngIf="employerForm.controls['City'].invalid && employerForm.controls['City'].touched"
+                                                class="text-danger">
+                                                <div *ngIf="employerForm.controls['City'].errors?.['required']">Cidade é
+                                                    obrigatória.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-outline">
+                                            <input type="text" formControlName="State" class="form-control" />
+                                            <label for="form3Example1w" class="form-label">Estado</label>
+                                            <div *ngIf="employerForm.controls['State'].invalid && employerForm.controls['State'].touched"
+                                                class="text-danger">
+                                                <div *ngIf="employerForm.controls['State'].errors?.['required']">Estado
+                                                    é obrigatório.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-outline">
+                                            <input type="text" formControlName="PinCode" class="form-control" />
+                                            <label for="form3Example1w" class="form-label">Código Pin</label>
+                                            <div *ngIf="employerForm.controls['PinCode'].invalid && employerForm.controls['PinCode'].touched"
+                                                class="text-danger">
+                                                <div *ngIf="employerForm.controls['PinCode'].errors?.['required']">
+                                                    Código Pin é obrigatório.</div>
+                                                <div *ngIf="employerForm.controls['PinCode'].errors?.['pattern']">Código
+                                                    Pin deve conter 6 dígitos numéricos.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-outline mb-1">
+                                    <textarea formControlName="CompanyAddress" rows="3" class="form-control"></textarea>
+                                    <label for="form3Example1q" class="form-label">Endereço</label>
+                                    <div *ngIf="employerForm.controls['CompanyAddress'].invalid && employerForm.controls['CompanyAddress'].touched"
+                                        class="text-danger">
+                                        <div *ngIf="employerForm.controls['CompanyAddress'].errors?.['required']">
+                                            Endereço é obrigatório.</div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 text-center">
+                                        <button (click)="register()" class="btn btn-success btn-lg mb-1"
+                                            [disabled]="employerForm.invalid">Cadastrar-se</button>
+                                    </div>
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>

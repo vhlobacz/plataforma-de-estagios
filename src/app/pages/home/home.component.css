@@ -1,0 +1,15 @@
+.home-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  
+  .btn-search {
+    font-size: 1.25rem;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+  }
