@@ -1,30 +1,23 @@
-import { NgModule } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CreateNewJobComponent } from './pages/create-new-job/create-new-job.component';
 import { HomeComponent } from './pages/home/home.component';
-import { JobDetailsComponent } from './pages/job-details/job-details.component';
-import { JobListingComponent } from './pages/job-listing/job-listing.component';
 import { JobsComponent } from './pages/jobs/jobs.component';
 import { LoginComponent } from './pages/login/login.component';
-import { MyJobsComponent } from './pages/my-jobs/my-jobs.component';
 import { RegistrationComponent } from './pages/registration/registration.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreateNewJobComponent,
     HomeComponent,
-    JobDetailsComponent,
-    JobListingComponent,
     JobsComponent,
     LoginComponent,
-    MyJobsComponent,
     RegistrationComponent
   ],
   imports: [
@@ -32,7 +25,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
