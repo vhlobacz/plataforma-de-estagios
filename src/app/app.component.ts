@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,33 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'meu-app';
+  isLoggedIn: boolean = false;
+  userInfo: any;
+
+  constructor() {
+    const userData = localStorage.getItem('jobLoginUser');
+    if (userData == null) {
+      this.isLoggedIn = false;
+    } else {
+      this.isLoggedIn = true;
+      this.userInfo = JSON.parse(userData)
+    }
+  }
+
+  // ngOnInit() {
+  //   const userData = localStorage.getItem('jobLoginUser');
+  //   if(userData == null) {
+  //     this.isLoggedIn = false;
+  //   } else {
+  //     this.isLoggedIn = true;
+  //     this.userInfo = JSON.parse(userData)
+  //     // console.log(this.userInfo);
+  //   }
+  // }
+
+  logoff() {
+    localStorage.removeItem('jobLoginUser');
+    this.isLoggedIn = false;
+  }
+
 }
