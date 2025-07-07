@@ -91,9 +91,7 @@ export class RegistrationComponent {
         alert(res.message)
         this.router.navigateByUrl('/home').then(() => {
           window.location.reload();
-        });
-
-        
+        });        
 
       } else {
         alert(res.message);  

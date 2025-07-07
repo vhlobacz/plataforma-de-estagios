@@ -24,7 +24,7 @@ Bootstrap 5
 
 # Links
 
-📎 [Repositório no GitHub](https://vhlobacz.github.io/plataforma-de-estagios/)  
+📎 [Repositório no GitHub](https://github.com/vhlobacz/plataforma-de-estagios/)
 📎 [Deploy no GitHub Pages](https://vhlobacz.github.io/plataforma-de-estagios/)
 
 
@@ -114,7 +114,7 @@ Acesse o aplicativo em [http://localhost:4200/](http://localhost:4200/).
 
 ## Instalação da extensão Cross Domain no Google Chrome
 
-1. Acesse a Chrome Web Store: [Cross Domain - Chrome Web Store](https://chrome.google.com/webstore/detail/cross-domain/ljdobmomdgdljniojadhoplhkpialdid)
+1. Acesse a Chrome Web Store: [Cross Domain - Chrome Web Store](https://chromewebstore.google.com/detail/cross-domain-cors/mjhpgnbimicffchbodmgfnemoghjakai?hl=pt-BR)
 2. Clique em **Adicionar ao Chrome** e siga as instruções para instalar a extensão.
 
 ## Testes

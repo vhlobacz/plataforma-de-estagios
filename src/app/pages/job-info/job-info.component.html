@@ -2,7 +2,7 @@
     <div class="card-body">
       <div class="row">
         <div class="col-12">
-          <h6 class="text-uppercase mb-2">{{ vaga.titulo }}</h6>
+          <h6 class="text-uppercase mb-2">{{ vaga.titulo | uppercase }}</h6>
         </div>
       </div>
       <div class="row mb-2">
@@ -10,7 +10,7 @@
           <i class="fa fa-money me-1" aria-hidden="true"></i>{{ addCoin(vaga.salario) }}
         </div>
         <div class="col-6">
-          <i class="fa fa-building me-1" aria-hidden="true"></i>{{ vaga.empresa }}
+          <i class="fa fa-building me-1" aria-hidden="true"></i>{{ vaga.empresa | uppercase }}
         </div>
       </div>
       <div class="row mb-2">
