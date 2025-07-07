@@ -93,6 +93,8 @@ export class RegistrationComponent {
           window.location.reload();
         });
 
+        
+
       } else {
         alert(res.message);  
         this.router.navigateByUrl('/home').then(() => {
@@ -104,6 +106,7 @@ export class RegistrationComponent {
 
   // Função para registrar o candidato
   registerJobSeeker() {
+
     if (this.jobSeekerForm.invalid) {
       alert('Formulário inválido. Verifique os campos!');
       return;
